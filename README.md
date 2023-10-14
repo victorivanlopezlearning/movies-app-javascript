@@ -1,0 +1,1 @@
+# Movies App | JavaScript Vanilla - Vite
