@@ -6,18 +6,36 @@
 
 body {
 	font-family: 'Montserrat', sans-serif;
-	background: #e0e0e0;
+	background-color: #cbdcdf;
 	color: #1d1d1d;
+	font-size: 16px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
 }
 
 .container {
 	width: 90%;
-	max-width: 1000px;
+	max-width: 1200px;
 	margin: 40px auto 100px auto;
-
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	gap: 40px;
+}
+
+@media (min-width: 768px) {
+	.container {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (min-width: 993px) {
+	.container {
+		grid-template-columns: repeat(4, 1fr);
+	}
 }
 
 .container .movie {
@@ -38,12 +56,12 @@ body {
 .pagination {
 	position: fixed;
 	bottom: 0;
-	background: #100a1f;
+	background-color: #000000;
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	gap: 20px;
-	padding: 10px;
+	padding: 20px;
 }
 
 .pagination button {
@@ -52,17 +70,19 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	text-align: center;
-	height: 50px;
-	width: 200px;
-	background: #241744;
-	color: #fff;
+	padding: 10px 50px;
+	background-color: #cbdcdf;
+	color: #000000;
 	border-radius: 100px;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 600;
-	transition: .3s ease all;
+	font-size: 20px;
 }
 
-.pagination button:hover {
-	background: #137c32;
+@media (hover: hover) {
+	.pagination button {
+		transition: .3s ease background-color;
+	}
+
+	.pagination button:hover {
+		background-color: #aeced2;
+	}
 }
